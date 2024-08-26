@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <script>
+ num=prompt("Number").split("").map(Number)
+emp=[],uni="",dup=""
+for(i of num){
+    if(!emp.includes(i))
+    emp.push(i)
+}
+console.log(`Number ${num}`)
+console.log(`Number Without duplicate values ${emp}`)
+for(i of emp){
+    c=0
+    for(j of num){
+        if(i==j)
+        c++;
+    }
+    if(c==1){
+        uni+=i
+    }
+    else{
+        dup+=i
+    }
+}
+console.log(`Unique Elements: ${uni}`)
+console.log(`Duplicate Elements: ${dup}`)
+    </script>
+</body>
+</html>
