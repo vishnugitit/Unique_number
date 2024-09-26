@@ -1,37 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-</head>
-<body>
-    <script>
-        num=prompt("Number").split("").map(Number)
-emp=[]
-for(i of num){
-    if(!emp.includes(i))
-    emp.push(i)
-}
-console.log(`Number ${num}`)
-console.log(`Number Without duplicate values ${emp}`)
-for(i of emp){
-    c=0
-    for(j of num){
-        if(i==j)
-        c++;
+<script>
+  num = prompt("Number").split("").map(Number);
+  emp = [];
+  for (i of num) {
+    if (!emp.includes(i)) emp.push(i);
+  }
+  console.log(`Number ${num}`);
+  console.log(`Number Without duplicate values ${emp}`);
+  for (i of emp) {
+    c = 0;
+    for (j of num) {
+      if (i == j) c++;
     }
-    if(c==1){
-        
-        console.log(`${i} --> ${c}`)
+    if (c == 1) {
+      console.log(`${i} --> ${c}`);
+    } else {
+      console.log(`${i} --> ${c}`);
     }
-    else{
-       
-        console.log(`${i} --> ${c}`)
-    }
-}
-
-    </script>
-</body>
-</html>
+  }
+</script>
